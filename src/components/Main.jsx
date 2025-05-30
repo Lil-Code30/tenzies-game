@@ -18,16 +18,38 @@ export default function Main() {
 
   const [dice, setDice] = useState(generateAllNewDice());
 
-  const diceElements = dice.map((die) => {
-    return <Die key={die.id} value={die.value} isHeld={die.isHeld} />;
-  });
-
   const handleRollDice = () => {
     setDice(generateAllNewDice());
   };
 
+  const hold = (id) => {
+    setDice((prevDice) => {
+      return prevDice.map((el) => {
+        if (el.id === id) {
+          return { ...el, isHeld: !el.isHeld };
+        } else {
+          return el;
+        }
+      });
+    });
+
+    console.log(id);
+  };
+
+  const diceElements = dice.map((die) => {
+    return (
+      <Die
+        key={die.id}
+        id={die.id}
+        value={die.value}
+        isHeld={die.isHeld}
+        handleHold={hold}
+      />
+    );
+  });
+
   return (
-    <main className="flex flex-col items-center py-10 gap-y-3 mx-3 sm:mx-auto mt-20 size-full md:mt-50 md:size-[600px] rounded-[10px] bg-[#f0eaea]  font-Inter">
+    <main className="flex flex-col items-center py-10 gap-y-3 mx-3 sm:mx-auto mt-20 size-full md:mt-50 md:size-[600px] rounded-[10px] bg-[#f0eaea]  font-Karla">
       <h1 className="text-5xl font-bold text-[#2B283A]">Tenzies</h1>
       <p className="text-center text-2xl text-[#4A4E74] font-normal w-[70%] line-clamp-3">
         Roll until all dice are the same. Click each die to freeze it at its
@@ -35,7 +57,7 @@ export default function Main() {
       </p>
       <div className="grid grid-cols-5 gap-5 my-5">{diceElements}</div>
       <button
-        className="bg-[#5035FF] w-[100px] h-[35px] text-white font-medium text-lg text-center font-Inter shadow-lg rounded-[5px] hover:bg-[#5035FF]/80 transition duration-300 ease-in-out"
+        className="bg-[#5035FF] w-[100px] h-[35px] text-white font-medium text-lg text-center font-Karla shadow-lg rounded-[5px] hover:bg-[#5035FF]/80 transition duration-300 ease-in-out"
         onClick={handleRollDice}
       >
         Roll
