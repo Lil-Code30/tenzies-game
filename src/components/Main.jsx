@@ -20,18 +20,22 @@ export default function Main() {
     return newDice;
   };
 
-  const [dice, setDice] = useState(generateAllNewDice());
+  const [dice, setDice] = useState(() => generateAllNewDice());
 
   let gameWon =
     dice.every((die) => die.isHeld) &&
     dice.every((die) => die.value === dice[0].value);
 
   const handleRollDice = () => {
-    setDice((oldDice) =>
-      oldDice.map((die) =>
-        die.isHeld ? die : { ...die, value: Math.ceil(Math.random() * 6) }
-      )
-    );
+    if (gameWon) {
+      setDice(generateAllNewDice());
+    } else {
+      setDice((oldDice) =>
+        oldDice.map((die) =>
+          die.isHeld ? die : { ...die, value: Math.ceil(Math.random() * 6) }
+        )
+      );
+    }
   };
 
   const hold = (id) => {
