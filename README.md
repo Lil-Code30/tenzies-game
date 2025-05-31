@@ -6,7 +6,7 @@ Un petit jeu interactif de dés réalisé avec **React.js**. Le but du jeu est s
 
 ## 🚀 Aperçu
 
----
+## <img src="public/tenzies-game.gif"/>
 
 ## 🎮 Comment jouer
 
@@ -28,7 +28,7 @@ Un petit jeu interactif de dés réalisé avec **React.js**. Le but du jeu est s
 ## 📦 Installation
 
 ```bash
-git clone https://github.com/ton-nom-utilisateur/tenzies-game.git
+git clone https://github.com/Lil-Code30/tenzies-game.git
 cd tenzies-game
 npm install
 npm start
