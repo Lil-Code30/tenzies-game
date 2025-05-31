@@ -32,8 +32,6 @@ export default function Main() {
         }
       });
     });
-
-    console.log(id);
   };
 
   const diceElements = dice.map((die) => {
