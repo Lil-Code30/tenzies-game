@@ -1,12 +1,35 @@
-# React + Vite
+# 🎲 Tenzies Game
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Un petit jeu interactif de dés réalisé avec **React.js**. Le but du jeu est simple mais addictif : **obtenez dix dés ayant le même chiffre**. Cliquez sur les dés pour les "geler", relancez les autres, et soyez stratégique !
 
-Currently, two official plugins are available:
+## [🌐Demo](https://vercel.com/lil-code30s-projects/tenzies-game)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Aperçu
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🎮 Comment jouer
+
+1. Cliquez sur le bouton **"Roll"** pour lancer les dés.
+2. Cliquez sur les dés que vous souhaitez **conserver** (ils seront gelés).
+3. Continuez à lancer les dés non gelés jusqu'à ce que **tous les dés affichent le même nombre**.
+4. Essayez d’y arriver en **le moins de lancers possible** !
+
+---
+
+## 🛠️ Technologies utilisées
+
+- React.js
+- TailwindCSS
+- JavaScript (ES6)
+
+---
+
+## 📦 Installation
+
+```bash
+git clone https://github.com/ton-nom-utilisateur/tenzies-game.git
+cd tenzies-game
+npm install
+npm start
+```
